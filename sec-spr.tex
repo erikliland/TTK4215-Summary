@@ -2,14 +2,14 @@
 \section{PR and SPR}
 
 \subsection{Positive Real (PR)}
-\paragraph{Definition}
+\paragraph{Definition 3.5.1}
 A rational function $G(s)$ of the complex variable $s=\sigma + j\omega$ is called PR if
 \begin{itemize}
 	\item $G(s)$ is real for real $s$
 	\item $\Re[G(s)] \geq 0 \quad \forall \quad \sigma > 0$
 \end{itemize}
 
-\paragraph{Lemma}
+\paragraph{Lemma 3.5.1}
 A rational proper transfer function $G(s)$ is PR iff
 \begin{itemize}
 	\item $G(s)$ is real for real $s$
@@ -18,9 +18,11 @@ A rational proper transfer function $G(s)$ is PR iff
 \end{itemize}
 
 \subsection{Strict Positive Real (SPR)}
-\paragraph{Definition} Assume $G(s)$ is not identically zero for all $s$. Then $G(s)$ is SPR if $G(s-\epsilon)$ is PR for some $\epsilon > 0$.
+\paragraph{Definition 3.5.2}
+Assume $G(s)$ is not identically zero for all $s$. Then $G(s)$ is SPR if $G(s-\epsilon)$ is PR for some $\epsilon > 0$.
 
-\paragraph{Theorem} (Necessary and sufficient conditions.) Assume that a rational function $G(s)$ of the complex variable $s = \sigma + j\omega$ is real for real $s$ and is not identically zero for all $s$. Let $n^*$ be the relative degree of $G(s) = Z(s) / R(s) \mbox{ with } |n^*| \leq 1$. Then, $G(s)$ is SPR iff
+\paragraph{Theorem 3.5.2}
+(Necessary and sufficient conditions.) Assume that a rational function $G(s)$ of the complex variable $s = \sigma + j\omega$ is real for real $s$ and is not identically zero for all $s$. Let $n^*$ be the relative degree of $G(s) = Z(s) / R(s)$ with $|n^*| \leq 1$. Then, $G(s)$ is SPR iff
 \begin{itemize}
 	\item $G(s)$ is analytic for $\sigma \geq 0$
 	\item $\Re[G(j\omega)] > 0 \quad \forall \quad \omega$
@@ -28,7 +30,7 @@ A rational proper transfer function $G(s)$ is PR iff
 	\item When $n^* = -1,\quad \lim_{|\omega| \to \infty} \frac{G(j\omega)}{j\omega} >0 $
 \end{itemize}
 
-\paragraph{Corollary}
+\paragraph{Corollary 3.5.1}
 \begin{itemize}
 	\item $G(s)$ is PR/SPR iff $1/G(s)$ is PR/SPR
 	\item If $G(s)$ is SPR, then, $|n^*| \leq 1$, and the zeros and poles of $G(s)$ lie in $\Re[s]<0$.
