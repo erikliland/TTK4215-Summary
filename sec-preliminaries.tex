@@ -1,0 +1,79 @@
+%!TEX root = TTK4125-Summary.tex
+\section{Preliminaries}
+\subsection{Norms}
+\paragraph{General $p$-norm}
+\begin{equation}
+	||x||_p
+	=
+	\left(
+		\int_{0}^{\infty} |x(\tau)|^p \dif t
+	\right)
+	^{1/p}
+\end{equation}
+
+\paragraph{$\mathcal{L}_\infty$-norm}
+\begin{equation}
+	||x||_\infty
+	=
+	\sup_{t \geq 0} |x(t)|
+\end{equation}
+and we say $x \in \mathcal{L}_\infty$ when $||x||_\infty$ exists.
+
+\subsection{Transfer function properties}
+Consider the polynomial
+\begin{equation}
+	X(s) = \alpha_n s^n + \alpha_{n-1} s^{n-1} + \cdots + \alpha_0
+\end{equation}
+and the transfer function
+\begin{equation}
+	G(s) = \frac{Z(s)}{R(s)}
+	.
+\end{equation}
+
+\paragraph{Monic:} $X(s)$ is \emph{monic} iff $\alpha_n = 1$.
+
+\paragraph{Hurwitz:} $X(s)$ is \emph{Hurwitz} if all roots of $X(s) = 0$ are in the left half plane.
+
+\paragraph{Minimum phase:} A system defined by the t.f. $G(s)$ is \emph{minimum phase} iff $Z(s)$ is Hurwitz.
+
+\paragraph{Stability:} A system defined by the t.f. $G(s)$ is \emph{stable} if $R(s)$ is Hurwitz.
+
+\paragraph{Coprime:} Two polynomials are \emph{coprime} if they have no common factors other than a constant.
+
+\subsection{(Strictly) positive real transfer functions}
+
+\paragraph{KYP Lemma}
+Given a square matrix $A$ with eigenvalues $\Re(\lambda) \leq 0$, a vector $B$ such that $(A,B)$ controllable, a vector $C$, and scalar $d \geq 0$, then the t.f.
+\begin{equation}
+	G(s) = d + C\T (s \mathrm{I} - A)^{-1} B
+\end{equation}
+is PR iff $\exists$ a symmetric pos. def. matrix $P$ and a vector $q$ such that
+\begin{gather}
+	A\T P + P A = -q q\T \\
+	P B - C = \pm \sqrt{2d} \cdot q
+	.
+\end{gather}
+
+\paragraph{LKY Lemma}
+Given a stable matrix $A$, a vector $B$ such that $(A,B)$ controllable, a vector $C$ and a scalar $d \geq 0$, then the t.f.
+\begin{equation}
+	G(s) = d + C\T (s \mathrm{I} - A)^{-1} B
+\end{equation}
+is SPR iff for any pos. def. matrix $L$, $\exists$ a symmetric pos. def. matrix $P$, a scalar $\nu > 0$ and a vector $q$ such that
+\begin{gather}
+	A\T P + P A = -q q\T - \nu L \\
+	P B - C = \pm q \sqrt{2d}
+	.
+\end{gather}
+
+\paragraph{MKY Lemma}
+Given a stable matrix $A$, vectors $B,C$, and a scalar $d \geq 0$, we have: If
+\begin{equation}
+	G(s) = d + C\T (s \mathrm{I} - A)^{-1} B
+\end{equation}
+is SPR, then for any $L = L\T > 0$, $\exists$ a scalar $\nu > 0$, a vector $q$ and a $P = P\T > 0$ such that
+\begin{gather}
+	A\T P + P A = -q q\T - \nu L \\
+	P B - C = \pm q \sqrt{2d}
+	.
+\end{gather}

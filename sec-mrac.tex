@@ -1,0 +1,8 @@
+%!TEX root = TTK4125-Summary.tex
+\section{Model reference adaptive control (MRAC)}
+MRAC requires a plant and a reference model. A controller is made so that the controller and plant together behave similar to the reference model. An adaptive algorithm estimates the controller parameters $\theta$. There are two main categories:
+\begin{itemize}
+	\item \emph{Direct}, where $\theta$ is equal to the controller gains.
+	\item \emph{Indirect}, where the controller gains are a function of $\theta$.
+\end{itemize}
+Huge drawback: Requires plant of minimum phase.
