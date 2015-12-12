@@ -1,6 +1,7 @@
 %!TEX root = TTK4215-Summary.tex
 \section{Preliminaries}
 \subsection{Norms}
+We say $x \in \mathcal{L}_p$ when $||x||_p$ exists.
 \paragraph{General $p$-norm}
 \begin{equation}
 	||x||_p
@@ -17,7 +18,7 @@
 	=
 	\sup_{t \geq 0} |x(t)|
 \end{equation}
-We say $x \in \mathcal{L}_\infty$ when $||x||_\infty$ exists.
+
 
 %!TEX root = TTK4215-Summary.tex
 \subsection{Models for dynamic systems}
@@ -83,7 +84,7 @@ and the transfer function
 
 \subsection{(Strictly) positive real transfer functions}
 
-\paragraph{KYP Lemma}
+\paragraph{KYP Lemma (3.5.2)}
 Given a square matrix $A$ with eigenvalues $\Re(\lambda) \leq 0$, a vector $B$ such that $(A,B)$ controllable, a vector $C$, and scalar $d \geq 0$, then the t.f.
 \begin{equation}
 	G(s) = d + C\T (s \mathrm{I} - A)^{-1} B
@@ -95,7 +96,7 @@ is PR iff $\exists$ a symmetric pos. def. matrix $P$ and a vector $q$ such that
 	.
 \end{gather}
 
-\paragraph{LKY Lemma}
+\paragraph{LKY Lemma (3.5.3)}
 Given a stable matrix $A$, a vector $B$ such that $(A,B)$ controllable, a vector $C$ and a scalar $d \geq 0$, then the t.f.
 \begin{equation}
 	G(s) = d + C\T (s \mathrm{I} - A)^{-1} B
@@ -107,7 +108,7 @@ is SPR iff for any pos. def. matrix $L$, $\exists$ a symmetric pos. def. matrix 
 	.
 \end{gather}
 
-\paragraph{MKY Lemma}
+\paragraph{MKY Lemma (3.5.4)}
 Given a stable matrix $A$, vectors $B,C$, and a scalar $d \geq 0$, we have: If
 \begin{equation}
 	G(s) = d + C\T (s \mathrm{I} - A)^{-1} B

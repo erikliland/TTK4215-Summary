@@ -1,5 +1,22 @@
 %!TEX root = TTK4215-Summary.tex
 \section{Adaptive pole placement control (APPC)}
 
-\subsection{Indirect APPC}
-Objective: Choose $u_p$ so that the closed-loop poles are the roots of $A^*(s) = 0$.
+\subsection{Indirect PPC}
+Given the system
+\begin{equation}
+	y_p = \frac{Z_p(s)}{R_p(s)} u_p
+	,
+\end{equation}
+the objective is to choose $u_p$ so that the closed-loop poles are the roots of a polynomial $A^*(s)$. Can be done by choosing $P$ (degree $q+n-1$) and $L$ (monic, degree $n-1$) such that
+\begin{equation}
+	L Q_m R_p + P Z_p = A^*
+\end{equation}
+is satisfied for $A^*$ of degree $2n+q-1$. $Q_m$ is chosen so that
+\begin{equation}
+	Q_m y_p = 0,
+\end{equation}
+and the control input is given by
+\begin{equation}
+	Q_m L u_p = -P (y_p - y_m)
+	.
+\end{equation}
